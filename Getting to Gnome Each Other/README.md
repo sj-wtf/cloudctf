@@ -1,0 +1,1 @@
+Flag is in the description. Copy and paste the flag from the description into the text box and hit submit.

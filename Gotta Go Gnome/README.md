@@ -1,0 +1,1 @@
+We are presented with a page that generates bearer tokens. According to people on Discord who did this challenge, the project id is the same as the Digital Forest challenge, which I did not know. I spent a bunch of time trying to find an API that would tell me what project my current credentials had access to, but didn't find one lol. Didn't get the flag.

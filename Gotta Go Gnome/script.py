@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import requests
+
+access_token = 'ya29.c.b0Aaekm1LMhevWW5NHUHybKESXF2EMre2Bq4YyS_tt0ncxZl2RjpGnTFDS-pRPq1UjCexAcKhO3rnPHGXLkfmQdgdHvjCP4C73-dHZWrlzdSlSxPt4AdU9-X47g6RJ-YV35PZYCZ2DQEHCIiDN83_SxxLLOfPGlO7QAOcW98jcPtgj9aX0asZrTHa55gAw2BvT3zXFtUobTdOUQ9oqL5G-KQpV_oxnETxqkuDstu217om3TFVf6kg1R7vBuVG4uQotyMOiRRTdbTOi_6AoWwLpTssIik3Gy5K-DBDsKNUHg6CktbLoxIDJkaMd40EhxrQ99onAkZhHQ3YsceJJTpnHL-zZAzrEMh1oOSJXHXdP49AvboXO1CqnShGsr3Iwr1InCkAbYrbNmVlfltB33yhjbI3rNiMT420Pizp8u2ojd0sxJV8YSO4k9pyW4Vm-B_t-YS532k_u2r3jiIQZvIciqQ137vbdBBeF1fFvz--debVcOh4Yisz4sezJBs2RdOo8661v1Vid8F-3gvgcm8iyi9OJulc9oWr8zF_8uxxh9j2Zu7_Wbdf7fy361bU_nmnZds3uw2cat3f1otIpVahWg2wf4SpmsF-FX4FSQBfQygqdRyyFlajXoqc8S2Va9xxRS7UB_0rzp3bUXwn63ROSppsJ7eWqSgaJ9-M5iJcuU41yZWquBjxlcjOdkW-pv324u_tszJ6kRzz08f6yZ8aBUn1ZeSt05l9VjgzFj3plc4pIwr4lus7Q_b_3XfiiF43RiInu5218hW4sgvnfyyc7n0gfJkX02-UkIMncR7v77BaywFxatmyMBaFsofe59pBwSVXF94vM2r_Bkj96vvnQ50f0sJcRaSj4e2_c3xZvfFwr828SYVoilhn5Z187ZrQZt4aIvov17Q2IgU-7x1yS2yQYfFm4Zh62ZUolB9Fd3uicY5tfe3SvRXVZcki5laJd5YtBjQW-qv0apow99Y5XzSWcZIow7koXwF8zro-4uusMfiYUzeilXYF'
+
+def list_projects(access_token: str) -> list:
+    url = "https://cloudresourcemanager.googleapis.com/v1/projects"
+    params = {}
+    headers = {"Authorization": f"Bearer {access_token}"}
+
+    r = requests.get(url, params=params, headers=headers)
+    r.raise_for_status()
+
+    print(r.json())
+
+list_projects(access_token)
